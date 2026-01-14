@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto ZIP Entpacker</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      min-width: 260px;
+      margin: 10px;
+    }
+    h1 {
+      font-size: 16px;
+      margin: 0 0 10px;
+    }
+    label {
+      display: block;
+      margin: 6px 0;
+      font-size: 13px;
+    }
+    button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 6px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    #status {
+      margin-top: 6px;
+      font-size: 12px;
+      color: green;
+      min-height: 14px;
+    }
+    .small {
+      font-size: 11px;
+      color: #555;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Auto ZIP Entpacker</h1>
+
+  <label>
+    <input type="checkbox" id="enabled">
+    Automatisch ZIP-Dateien entpacken
+  </label>
+
+  <label>
+    <input type="checkbox" id="keepFolders">
+    Ordner-Struktur aus ZIP behalten
+  </label>
+
+  <label>
+    <input type="checkbox" id="deleteZip">
+    Original-ZIP nach Entpacken löschen
+  </label>
+
+  <button id="save">Speichern</button>
+  <div id="status"></div>
+
+  <p class="small">
+    Entpackte Dateien werden immer im Standard-Download-Ordner gespeichert.
+  </p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
